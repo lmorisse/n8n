@@ -1,10 +1,1 @@
-namespace YourNamespace.Models
-{
-    public class Project
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int TeamId { get; set; }
-        public Team Team { get; set; }
-    }
-}
+using System.Collections.Generic; namespace YourNamespace.Models { public class Project { public int Id { get; set; } public string Name { get; set; } public ICollection<User> Users { get; set; } } }
