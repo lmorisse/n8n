@@ -1,0 +1,24 @@
+@model ComplianceProject.Models.ComplianceModel
+
+@{
+    ViewBag.Title = "Compliance Controls";
+}
+
+<h2>Compliance, Data Retention and Privacy Controls</h2>
+
+@using (Html.BeginForm("Save", "Compliance", FormMethod.Post)) 
+{
+    <div>
+        <label>Retention Period</label>
+        @Html.EditorFor(model => model.RetentionPeriod)
+    </div>
+    <div>
+        <label>Data Export/Deletion Request</label>
+        @Html.EditorFor(model => model.DataExportOrDeletionRequest)
+    </div>
+    <div>
+        <label>Compliance Report</label>
+        @Html.EditorFor(model => model.ComplianceReport)
+    </div>
+    <button type="submit">Save</button>
+}
